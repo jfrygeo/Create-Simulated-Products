@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20170323</CreaDate><CreaTime>14233200</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.5\ArcToolbox\Toolboxes\Spatial Statistics Tools.tbx\ExportXYv" Date="20170323" Time="142332">ExportXYv in_memory\eventLayer OBJECTID;UniqueID;Time COMMA C:\Users\john6807\Documents\GitHub\Create-Simulated-Products-Python\Output\Hammer.csv ADD_FIELD_NAMES</Process></lineage></DataProperties></Esri></metadata>
