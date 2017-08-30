@@ -51,7 +51,7 @@ def addTime(tm, secs):
     #fulldate = datetime.datetime(2016, 11, 15, tm.hour, tm.minute, tm.second)
 	fulldate = datetime.datetime.now()
 	fulldate = fulldate + datetime.timedelta(seconds=secs)
-	return fulldate
+    return fulldate
 
 def createFeatureClass(sr):
 	arcpy.CreateFeatureclass_management(arcpy.env.workspace, "tempFC", "POINT", "", "", "", sr)
@@ -86,10 +86,11 @@ def main(*args):
 	speedOfTravelField = args[2] 
 	timeCutInterval = args[3] 
 	uniqueIdField = args[4] 
-	startDate = datetime.datetime.now().time()
+	#startDate = datetime.datetime.now().time()
 	keepPointFC = args[5] 
 	timeInterval = 300
-	outputCSV = args[6] 
+	outputCSV = args[6]
+	startDate = args[7]
 
 	sortedValues = sortUniqueValues(trackLines, uniqueIdField, speedOfTravelField, timeCutInterval) 
 			
