@@ -10,7 +10,6 @@ def howManyPoints(polyLine, disInterval, speedTraveling):
 		segmentShard = segmentCounts % 1
 		segmentCounts -= segmentShard
 		segmentCounts += 1
-	
 	return [segmentCounts, segmentShard, speedTraveling]
 
 def sortUniqueValues(inputFeatureClass, idField, speed, cutLength,):

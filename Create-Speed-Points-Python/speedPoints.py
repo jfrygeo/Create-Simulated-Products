@@ -2,10 +2,10 @@ import arcpy
 import datetime
 import re
 
+InputPolyline = arcpy.GetParameterAsText(0)
 
-
-def howManyPoints(polyLine, disInterval, speedTraveling):
-	segmentCounts = polyLine.getLength('PLANAR', 'METERS') / disInterval
+def howManyPoints(InputPolyline, disInterval, speedTraveling):
+	segmentCounts = InputPolyline.getLength('PLANAR', 'METERS') / disInterval
 	if segmentCounts % 1 > 0:
 		segmentShard = segmentCounts % 1
 		segmentCounts -= segmentShard
@@ -34,7 +34,7 @@ def segmentingPoints(trackId, trackInfo, segRate):
 	
 	for info in trackInfo:
 		count +=1
-	 	for line, data in info.items():
+	for line, data in info.items():
 			for i in xrange(int(data[0])):
 				pointDis = line.positionAlongLine((float(data[2]) * float(segRate)) * i, False)
 				pointsDict[str(count) + trackId + str(i)] = pointDis.firstPoint
